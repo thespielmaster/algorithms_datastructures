@@ -6,6 +6,11 @@
 *.exe
 *.app
 
+# Ignore Unix executables (no extension)
+# Files with no extensions and executable permissions
+*/*
+!*/.gitignore
+
 # Compiled Object files
 *.slo
 *.lo
