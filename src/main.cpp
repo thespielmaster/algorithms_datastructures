@@ -11,7 +11,7 @@ int main(){
 
 
     Sorting<int> sort(arr);
-    std::vector<int> sorted = sort.insertion_sort();
+    std::vector<int> sorted = sort.mergeSort();
 
     for(auto it = sorted.begin(); it != sorted.end(); it++){
         std::cout << *it << std::endl;

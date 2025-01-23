@@ -14,5 +14,10 @@ private:
 public:
 
     Sorting(const std::vector<T>& unsorted);
-    std::vector<T> insertion_sort();
+
+    std::vector<T> insertionSort();
+
+    std::vector<T> mergeSort();
+    void merge(std::vector<T>& arr, int start, int middle, int end);
+    std::vector<T> recursiveMergeSort(std::vector<T>& arr, int start, int end);
 };
