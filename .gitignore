@@ -10,6 +10,7 @@
 # Files with no extensions and executable permissions
 */*
 !*/.gitignore
+main
 
 # Compiled Object files
 *.slo
