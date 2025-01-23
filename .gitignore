@@ -1,6 +1,11 @@
 # Prerequisites
 *.d
 
+# Ignore C++ executable files
+*.out
+*.exe
+*.app
+
 # Compiled Object files
 *.slo
 *.lo
