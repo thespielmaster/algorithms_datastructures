@@ -7,9 +7,10 @@
 *.app
 
 # Ignore Unix executables (no extension)
-# Files with no extensions and executable permissions
-*/*
-!*/.gitignore
+# Ignore files with no extension and executable permissions
+# Commented out overly broad rule:
+# */*
+# Keep ignoring main (assuming "main" is Unix exec):
 main
 
 # Compiled Object files
@@ -37,13 +38,14 @@ main
 *.a
 *.lib
 
-# Executables
-*.exe
-*.out
-*.app
-
 # VSCode
 .vscode/
 
 # OSx
 *.dSYM
+
+# Ignore everything in src/ except specific file types
+src/*
+!src/*.cpp
+!src/*.hpp
+!src/makefile
