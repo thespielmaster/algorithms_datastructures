@@ -43,9 +43,3 @@ main
 
 # OSx
 *.dSYM
-
-# Ignore everything in src/ except specific file types
-src/*
-!src/*.cpp
-!src/*.hpp
-!src/makefile
