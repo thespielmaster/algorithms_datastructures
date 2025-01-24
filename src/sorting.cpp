@@ -1,13 +1,6 @@
 #include <iostream>
 #include <vector>
-#include "sorting.hpp"
-
-template <typename T>
-void Sorting<T>::verifySortable(){
-    if (!std::is_arithmetic<T>::value && !std::is_same<T, std::string>::value){
-        throw std::invalid_argument("The type of elements in the vector does not support ordering operations.");
-    }
-}
+#include "Sorting.hpp"
 
 template <typename T>
 Sorting<T>::Sorting(const std::vector<T>& unsorted) : data(unsorted) { 
@@ -34,12 +27,6 @@ std::vector<T> Sorting<T>::insertionSort(){
 
     }
     return unsorted;
-}
-
-template <typename T>
-std::vector<T> Sorting<T>::mergeSort(){
-    std::vector<T> unsorted = this->data;
-    return recursiveMergeSort(unsorted, 0, unsorted.size() - 1);
 }
 
 template <typename T>
@@ -74,7 +61,7 @@ void Sorting<T>::merge(std::vector<T>& arr, int start, int middle, int end){
 
 template <typename T>
 std::vector<T> Sorting<T>::recursiveMergeSort(std::vector<T>& arr, int start, int end){
-    
+        
     if(end - start + 1 <= 1){
         return arr;
     }
@@ -89,9 +76,15 @@ std::vector<T> Sorting<T>::recursiveMergeSort(std::vector<T>& arr, int start, in
     return arr;
 }
 
+template <typename T>
+std::vector<T> Sorting<T>::mergeSort(){
+    std::vector<T> unsorted = this->data;
+    return recursiveMergeSort(unsorted, 0, unsorted.size() - 1);
+}
 
-template class Sorting<int>;
-template class Sorting<double>;
-template class Sorting<float>;
-template class Sorting<long long>;
-template class Sorting<std::string>;
+template <typename T>
+void Sorting<T>::verifySortable(){
+    if (!std::is_arithmetic<T>::value && !std::is_same<T, std::string>::value){
+        throw std::invalid_argument("The type of elements in the vector does not support ordering operations.");
+    }  
+}

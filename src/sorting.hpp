@@ -21,3 +21,9 @@ public:
     void merge(std::vector<T>& arr, int start, int middle, int end);
     std::vector<T> recursiveMergeSort(std::vector<T>& arr, int start, int end);
 };
+
+template class Sorting<int>;
+template class Sorting<double>;
+template class Sorting<float>;
+template class Sorting<long long>;
+template class Sorting<std::string>;

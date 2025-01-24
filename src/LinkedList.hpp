@@ -5,8 +5,8 @@ struct ListNode{
     T value;
     ListNode* next;
 
-    ListNode(T val);
-    ListNode(T val, ListNode* next);
+    ListNode(T val) : value(val), next(nullptr) {}
+    ListNode(T val, ListNode* next) : value(val), next(next) {}
 };
 
 template <typename T>
@@ -23,3 +23,6 @@ public:
     void remove(int index);
     void print();
 };
+
+template struct ListNode<int>;
+template class LinkedList<int>;

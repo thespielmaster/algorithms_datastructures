@@ -1,6 +1,6 @@
 #include <iostream>
-#include "sorting.hpp"
-#include "linked_list.hpp"
+#include "LinkedList.cpp"
+#include "Sorting.cpp"
 
 int main(){
 
