@@ -6,3 +6,7 @@ Next
 - stack
 - queue
 - doubly-linked-list
+- quick-sort, bucket-sort
+- BST + BFS/DSF
+- min/max heaps
+- hash-map
